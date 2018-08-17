@@ -1,6 +1,6 @@
-package com.rao.study.mybatis.java.mapper;
+package com.rao.study.mybatis.xml.mapper;
 
-import com.rao.study.mybatis.java.domain.User;
+import com.rao.study.mybatis.xml.domain.User;
 
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);

@@ -1,7 +1,8 @@
-package com.rao.study.mybatis.java;
+package com.rao.study.mybatis.xml;
 
-import com.rao.study.mybatis.java.domain.User;
-import com.rao.study.mybatis.java.mapper.UserMapper;
+import com.rao.study.mybatis.xml.domain.User;
+import com.rao.study.mybatis.xml.mapper.UserMapper;
+import com.rao.study.mybatis.xml.service.JdbcOperation;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 

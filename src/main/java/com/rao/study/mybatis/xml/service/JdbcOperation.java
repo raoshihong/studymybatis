@@ -1,4 +1,4 @@
-package com.rao.study.mybatis.java;
+package com.rao.study.mybatis.xml.service;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;

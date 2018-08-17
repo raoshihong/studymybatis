@@ -1,4 +1,4 @@
-package com.rao.study.mybatis.java.domain;
+package com.rao.study.mybatis.xml.domain;
 
 public class User {
     private Integer id;
