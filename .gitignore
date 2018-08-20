@@ -4,6 +4,14 @@
 
 # IntelliJ project files
 .idea
+target/
+.classpath
+.project
+.settings/
+*.log
+*log*.zip
+.generatorignore
+/*/.gitignore
 *.iml
-out
-gen
+
+.DS_Store
