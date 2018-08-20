@@ -29,10 +29,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void queryUser(User user) {
+    public User queryUser(User user) {
         SqlSession sqlSession = sqlSessionFactory.openSession(true);
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-        user = userMapper.selectByPrimaryKey(user.getId());
+        return userMapper.selectByPrimaryKey(user.getId());
     }
 
     @Override

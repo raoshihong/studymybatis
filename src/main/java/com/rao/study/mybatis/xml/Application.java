@@ -16,12 +16,16 @@ public class Application {
 //        userService.insertUser(user);
 
         user.setId(4);
-        user.setBirthday(new Date());
-        user.setSalary(new BigDecimal(20.20));
-        userService.updateUser(user);
+//        user.setBirthday(new Date());
+//        user.setSalary(new BigDecimal(20.20));
+//        userService.updateUser(user);
 
-        user.setId(7);
-        userService.deleteUser(user);
+//        user.setId(7);
+//        userService.deleteUser(user);
+
+        user = userService.queryUser(user);
+
+        System.out.println(user);
     }
 
 }
