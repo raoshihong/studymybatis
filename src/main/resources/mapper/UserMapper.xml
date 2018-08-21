@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.rao.study.mybatis.xml.mapper.UserMapper" >
-  <resultMap id="BaseResultMap" type="com.rao.study.mybatis.xml.domain.User" >
+  <resultMap id="BaseResultMap" type="User" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="birthday" property="birthday" jdbcType="TIMESTAMP" />
@@ -23,7 +23,7 @@
     delete from t_user
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.rao.study.mybatis.xml.domain.User" >
+  <insert id="insert" parameterType="User" >
     <!-- 指定插入后立即返回插入后的id -->
     <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
@@ -35,7 +35,7 @@
       #{createAt,jdbcType=TIMESTAMP}, #{updateAt,jdbcType=TIMESTAMP}, #{age,jdbcType=INTEGER}, 
       #{salary,jdbcType=DECIMAL})
   </insert>
-  <insert id="insertSelective" parameterType="com.rao.study.mybatis.xml.domain.User" >
+  <insert id="insertSelective" parameterType="User" >
     insert into t_user
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -84,7 +84,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.rao.study.mybatis.xml.domain.User" >
+  <update id="updateByPrimaryKeySelective" parameterType="User" >
     update t_user
     <set >
       <if test="name != null" >
@@ -108,7 +108,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.rao.study.mybatis.xml.domain.User" >
+  <update id="updateByPrimaryKey" parameterType="User" >
     update t_user
     set name = #{name,jdbcType=VARCHAR},
       birthday = #{birthday,jdbcType=TIMESTAMP},
