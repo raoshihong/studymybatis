@@ -118,4 +118,8 @@
       salary = #{salary,jdbcType=DECIMAL}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="selectByName" parameterType="string" resultMap="BaseResultMap"><!-- resultMap指定的是返回的元素的类型 -->
+    select <include refid="Base_Column_List" /> from t_user where name like CONCAT('%',#{user_name},'%') ; <!-- 这里的user_name要与@param一一对应 -->
+  </select>
 </mapper>

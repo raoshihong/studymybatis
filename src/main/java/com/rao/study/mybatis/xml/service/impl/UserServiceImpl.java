@@ -7,6 +7,8 @@ import com.rao.study.mybatis.xml.service.UserService;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
+import java.util.List;
+
 public class UserServiceImpl implements UserService {
 
     private static SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlSessionFactory();
@@ -40,5 +42,12 @@ public class UserServiceImpl implements UserService {
         SqlSession sqlSession = sqlSessionFactory.openSession(true);
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
         userMapper.deleteByPrimaryKey(user.getId());
+    }
+
+    @Override
+    public List<User> queryByName(String name) {
+        SqlSession sqlSession = sqlSessionFactory.openSession(true);
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        return userMapper.selectByName(name);
     }
 }
