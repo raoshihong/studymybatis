@@ -27,5 +27,7 @@
 
     <mappers>
         <mapper resource="mapper/UserMapper.xml"/>
+        <mapper resource="mapper/StudentMapper.xml" />
+        <mapper resource="mapper/CardMapper.xml" />
     </mappers>
 </configuration>
